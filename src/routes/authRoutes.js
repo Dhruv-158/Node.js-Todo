@@ -31,6 +31,9 @@ router.post(
   authController.login
 );
 
+// Logout user
+router.post('/logout', authenticate, authController.logout);
+
 // Get current user
 router.get('/:id', authenticate, authController.getUser);
 
